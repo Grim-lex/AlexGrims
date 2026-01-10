@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./pong-styles.css" />
 
     <style>
+      /* Body styling */
       body {
         background-color: grey;
         color: white;
@@ -18,6 +19,7 @@
         padding: 0;
       }
 
+      /* Game container styling */
       #game {
         display: flex;
         justify-content: center;
@@ -29,13 +31,15 @@
         background-color: black;
       }
 
-      .paddle {
-        background-color: red;
+      /* Paddles - left and right */
+      #left-paddle, #right-paddle {
+        background-color: red; /* red paddles */
         width: 20px;
         height: 100px;
         position: absolute;
       }
 
+      /* Ball styling */
       .ball {
         width: 20px;
         height: 20px;
@@ -44,20 +48,17 @@
         position: absolute;
       }
 
+      /* Score styling */
       .score {
         position: absolute;
         top: 10px;
         font-size: 32px;
       }
 
-      #left-score {
-        left: 20px;
-      }
+      #left-score { left: 20px; }
+      #right-score { right: 20px; }
 
-      #right-score {
-        right: 20px;
-      }
-
+      /* Instructions and debug panels */
       #instructions, #errors-debug {
         max-width: 800px;
         margin: 20px auto;
@@ -71,8 +72,10 @@
   </head>
 
   <body>
+    <!-- Motivational text -->
     <p><font size="4">Nothing else to do but keep going</font></p>
     
+    <!-- Game container -->
     <div id="game">
       <div class="paddle" id="left-paddle"></div>
       <div class="paddle" id="right-paddle"></div>
@@ -81,6 +84,7 @@
       <h1 class="score" id="right-score">0</h1>
     </div>
 
+    <!-- Instructions -->
     <div id="instructions">
       <p>
         <strong><span style="text-decoration:underline;">INSTRUCTIONS:</span></strong><br/>
@@ -94,6 +98,7 @@
       </p>
     </div>
 
+    <!-- Debug info -->
     <div id="errors-debug">
       Computer control is <span id="computer-control-state">OFF</span><br/>
       Mouse control is <span id="mouse-control-state">OFF</span><br/>
@@ -105,6 +110,7 @@
       <p id="debug"></p>
     </div>
 
+    <!-- JavaScript files -->
     <script type="module" src="./javascript/pong-audio.js"></script>
     <script type="module" src="./javascript/pong-classes.js"></script>
     <script type="module" src="./javascript/pong-events.js"></script>
